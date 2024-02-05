@@ -13,6 +13,8 @@ python -i palindrome.py
 ```
 
 ## Tests with pytest
+https://docs.pytest.org/en/stable/index.html
+
 ```
 pytest
 
