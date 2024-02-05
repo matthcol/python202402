@@ -5,10 +5,12 @@ def gcd(a: int, b: int) -> int:
         a (int): first integer (>0)
         b (int): second integer (>0)
 
+    Raises:
+        ValueError: if one arg is negative or zero
+        
     Returns:
         int: gcd of a and b
     """
-    
     # negative or null integers
     # sol1: assert => AssertionError
     # assert a > 0
