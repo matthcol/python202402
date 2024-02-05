@@ -29,8 +29,9 @@ def test_gcd_one_equals_1():
 def test_gcd(a, b, expected_result):
     assert gcd(a, b) == expected_result
 
-@pytest.mark.skip('Errors not managed yet')
+# @pytest.mark.xfail(raises=ValueError, reason="args a and b must be stritcly positive")
 def test_gcd_one_negative_or_null():
-    assert gcd(1, 0) == 'I dont know'
+    with pytest.raises(ValueError, match="args a and b must be stritcly positive"):
+        gcd(1, 0)
     
 
