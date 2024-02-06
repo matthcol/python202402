@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 
 # type alias
 Square = List[List[int]]
@@ -11,7 +11,7 @@ def isMagic(square: Square) -> bool:
     # TODO
     return False
 
-def isMagicDetail(square: Square):
+def isMagicDetail(square: Square) -> Dict[str, List[bool]]:
     # TODO
     return {
         'rows_ok': [False, False, False],
@@ -48,13 +48,46 @@ def areMagicRowsDetail(square: Square, ms: int) -> List[bool]:
 
 
 def areMagicColumns(square: Square, ms: int) -> bool:
-    pass
+    # TODO
+    return False
 
 def areMagicColumnsDetail(square: Square, ms: int) -> List[bool]:
-    pass
+    # TODO
+    return [False, False, False]
 
 def areMagicDiagonals(square: Square, ms: int) -> bool:
-    pass
+    # TODO
+    return False
 
 def areMagicDiagonalsDetail(square: Square, ms: int) -> Tuple[bool, bool]:
-    pass
+    # TODO
+    return (False, False)
+
+def areAllNumbersInRange(square: Square, n: int) -> bool:
+    # TODO
+    return False
+
+def areAllNumbersInRangeDetail(square: Square, n: int) -> Tuple[bool, Dict[str, List[int]]]:
+    """check if allnumbers in square are only used once and all from range[1..n²]
+
+    Args:
+        square (Square): square to check
+        n (int): size of square
+
+    Returns:
+        Tuple[bool, Dict[str, List[int]]]: a pair with a boolean status if everything is good
+        and a dictionnary of errors (possible keys are: missing, duplicate, out_of_range)
+        
+        Exemple of return value:
+        - when all is ok
+        (True, {})
+        - when numbers are wrongly picked
+        (False, {
+            'duplicate': [3, 4],
+            'missing': [1, 5, 6, 7, 9],
+            'out_of_range': [-1, 0, 10] 
+        })
+    """
+    # TODO
+    return (False, {})
+    
