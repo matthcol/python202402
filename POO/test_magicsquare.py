@@ -14,7 +14,13 @@ from squares import *
         (3, 15), 
         (5, 65),
         (12, 870)
-    ]
+    ],
+    ids={
+        "size_1",
+        "size_3",
+        "size_5",
+        "size_12",
+    }
 )
 def test_magicSum(n, ms):
     assert magicSum(n) == ms
@@ -84,8 +90,8 @@ def test_areAllNumbersInRangeDetail_ko_repeatedValue():
         (square_ko_outOfRangeAbove, 3, [3], [13])
     ],
     ids=[
-        "square_with_number_before_range",
-        "square_with_number_after_range"
+        "number_before_range",
+        "number_after_range"
     ]
 )
 def test_areAllNumbersInRangeDetail_ko_outOfRange(square, n, missing, outOfRange):
