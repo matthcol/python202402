@@ -6,7 +6,12 @@ def test_equals_ok_same():
     city = City("Pau", 77_000, 64)
     assert city == city
     assert not city != city
-    
+
+def test_equals_ok_copy():
+    city = City("Pau", 77_000, 64)
+    cityClone = City("Pau", 77_000, 64)
+    assert city == cityClone
+    assert not city != cityClone    
 
 def test_equals_ko_other_not_a_city():
     city = City("Pau", 77_000, 64)
@@ -15,12 +20,6 @@ def test_equals_ko_other_not_a_city():
     assert not other == city
     assert city != other
     assert other != city
-    
-def test_equals_ok_copy():
-    city = City("Pau", 77_000, 64)
-    cityClone = City("Pau", 77_000, 64)
-    assert city == cityClone
-    assert not city != cityClone
     
 @pytest.mark.parametrize(
     ["otherName", "otherPopulation", "otherDepartment"],
