@@ -1,4 +1,4 @@
-from city import City
+from city import City, CoastalCity
 
 def main():
     city1 = City('Pau', 77_000, 64)
@@ -13,6 +13,15 @@ def main():
         print("\t-name:", city.name)
         print("\t-population:", city.population)
         print("\t-department:", city.department)
+        print()
+        city += 10
+        city += -100
+        city -= 20
+    print(city1, city2)
+    print("Difference of population:", city2.populationDifference(city1))
+    coastalCity = CoastalCity("Bayonne", 49_000, 64, "Atlantic Ocean")
+    coastalCity += 10
+    print(coastalCity, type(coastalCity), coastalCity.populationDifference(city1))
 
 if __name__ =="__main__":
     main()
