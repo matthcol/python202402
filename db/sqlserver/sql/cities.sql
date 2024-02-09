@@ -1,0 +1,14 @@
+create table city(
+    id int identity,
+    insee_code char(5), 
+    city_code varchar(50), 
+    zip_code char(5), 
+    label char(5) not null, 
+    latitude double precision, 
+    longitude double precision,
+    department_name varchar(30), 
+    department_number varchar(3), 
+    region_name varchar(30),
+    region_geojson_name varchar(30),
+	constraint pk_city PRIMARY KEY(id)
+);
