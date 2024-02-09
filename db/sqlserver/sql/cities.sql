@@ -3,7 +3,7 @@ create table city(
     insee_code char(5), 
     city_code varchar(50), 
     zip_code char(5), 
-    label char(5) not null, 
+    label varchar(50) not null, 
     latitude double precision, 
     longitude double precision,
     department_name varchar(30), 
